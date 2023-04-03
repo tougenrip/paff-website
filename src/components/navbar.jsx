@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import logo from '../img/pafflogo.webp';
+import logo from '../assets/img/pafflogo.webp';
 import Button from './button';
 
 const Navbar = () => {

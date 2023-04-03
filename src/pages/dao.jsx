@@ -1,38 +1,55 @@
 import React, { useRef } from 'react';
-import * as THREE from "three"
-import Stats from "three/examples/jsm/libs/stats.module"
+import * as THREE from "three";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import Stats from "three/examples/jsm/libs/stats.module";
 import Overlay from '../components/overlay';
 
 
 if (window.location.pathname === '/dao') {
-  const scene = new THREE.Scene()
+  const scene = new THREE.Scene();
   
-  const gridHelper = new THREE.GridHelper(10, 10, 0xaec6cf, 0xaec6cf)
-  scene.add(gridHelper)
+  const gridHelper = new THREE.GridHelper(250, 50, 0xaec6cf, 0xaec6cf);
+  scene.add(gridHelper);
   
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
+  );
+
+  const ambLight = new THREE.AmbientLight(0xffffff, 0.8);
+  scene.add(ambLight);
+  
+  const loader = new GLTFLoader();
+
+  loader.load(
+    "/models/PaffDAO.glb",
+    function (gltf){
+      scene.add(gltf.scene)
+    },
   )
   
-  const renderer = new THREE.WebGLRenderer()
+
+  
+  const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight)
   document.body.appendChild(renderer.domElement)
   renderer.domElement.style.position = 'fixed';
   renderer.domElement.style.top = '0';
   renderer.domElement.style.zIndex = '-99';
   
-  const geometry = new THREE.BoxGeometry()
+  const geometry = new THREE.BoxGeometry();
   const material = new THREE.MeshBasicMaterial({
     color: 0xff0000,
     wireframe: true
-  })
+  });
   
-  const cube = new THREE.Mesh(geometry, material)
-  cube.position.set(0, 0.5, -10)
-  scene.add(cube)
+  const cube = new THREE.Mesh(geometry, material);
+  cube.position.set(0, 0.5, -10);
+  scene.add(cube);
+
+  
   
   window.addEventListener("resize", onWindowResize, false)
   function onWindowResize() {
@@ -83,7 +100,7 @@ if (window.location.pathname === '/dao') {
       camera.lookAt(cube.position)
       camera.position.set(0, 1, 2)
       cube.position.z = lerp(-10, 0, scalePercent(0, 40))
-      //console.log(cube.position.z)
+      // console.log(cube.position.z)
     }
   })
   
@@ -139,8 +156,8 @@ if (window.location.pathname === '/dao') {
         ((document.documentElement.scrollHeight || document.body.scrollHeight) -
           document.documentElement.clientHeight)) *
       100
-    document.getElementById("scrollProgress").innerText =
-      "Scroll Progress : " + scrollPercent.toFixed(2)
+    // document.getElementById("scrollProgress").innerText =
+    //   "Scroll Progress : " + scrollPercent.toFixed(2)
   }
   
   const stats = new Stats()
