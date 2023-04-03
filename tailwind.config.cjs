@@ -20,14 +20,14 @@ module.exports = {
       'Gilroy': ['Gilroy', 'sans-serif']
     },
     backgroundImage:{
-      'Hero': "url('img/hero.webp')",
-      'Journey': "url('img/journey.jpg')",
-      'Book': "url('img/book.webp')",
-      'BookSec1': "url('img/bookSec1.webp')",
-      'BookSec2': "url('img/bookSec2.webp')",
-      'BookSec3': "url('img/bookSec3.webp')",
-      'BookSec4': "url('img/bookSec4.webp')",
-      'BookSec5': "url('img/bookSec5.webp')",
+      'Hero': "url('assets/img/hero.webp')",
+      'Journey': "url('assets/img/journey.jpg')",
+      'Book': "url('assets/img/book.webp')",
+      'BookSec1': "url('assets/img/bookSec1.webp')",
+      'BookSec2': "url('assets/img/bookSec2.webp')",
+      'BookSec3': "url('assets/img/bookSec3.webp')",
+      'BookSec4': "url('assets/img/bookSec4.webp')",
+      'BookSec5': "url('assets/img/bookSec5.webp')",
     }
   },
   plugins: [],
