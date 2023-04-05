@@ -7,9 +7,9 @@ import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { angleToRadians } from '../utils/angle'
 
-export function PaffModel(props) {
+export default function PaffModel(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('PaffDAO.glb')
+  const { nodes, materials, animations } = useGLTF('../models/PaffDAO.glb')
   const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
@@ -113,4 +113,4 @@ export function PaffModel(props) {
   )
 }
 
-useGLTF.preload('/PaffDAO.glb')
+useGLTF.preload('../models/PaffDAO.glb')
