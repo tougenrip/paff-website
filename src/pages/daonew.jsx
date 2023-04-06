@@ -11,13 +11,17 @@ import PaffModel from '../components/PaffDAO'
 // our Theatre.js project sheet, we'll use this later
 const demoSheet = getProject('Demo Project').sheet('Demo Sheet')
 
-studio.initialize()
-studio.extend(extension)
+
+if (window.location.pathname === '/dao'){
+  studio.initialize()
+  studio.extend(extension)
+} else {}
+
 
 
 const DaoNew = () => {
     return(
-        <Canvas id='3d'>  
+        <Canvas id='3d'>
             <SheetProvider sheet={demoSheet}>
             <PerspectiveCamera theatreKey="Camera" makeDefault position={[5, 5, -5]} fov={75}/>
             <ambientLight/>
