@@ -15,10 +15,10 @@ import Overlay from '../components/overlay'
 const demoSheet = getProject('Demo Project', {state :demoProjectState}).sheet('Demo Sheet')
 
 
-if (window.location.pathname === '/dao'){
-  studio.initialize()
-  studio.extend(extension)
-} else {}
+// if (window.location.pathname === '/dao'){
+//   studio.initialize()
+//   studio.extend(extension)
+// } else {}
 
 
 
