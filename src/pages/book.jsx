@@ -9,7 +9,7 @@ const CoverBook = () => {
                 <div className='container max-w-[100vw] relative h-[100vh] mx-auto text-white'>
                     <div className='row absolute top-[35vh] right-0 left-8 md:left-24 mx-auto text-start font-Gilroy font-bold text-4xl md:text-6xl lg:text-7xl'>
                         <h1 className='mx-auto font-thin'>THE BOOK</h1>
-                        <h2 className='mx-auto'>LEARN CULTURE Some<br /><span className='font-thin'>AND</span> BE DE<br className='block md:collapse' />CENTRALIZED</h2>
+                        <h2 className='mx-auto'>LEARN CULTURE<br /><span className='font-thin'>AND</span> BE DE<br className='block md:collapse' />CENTRALIZED</h2>
                     </div>
                 </div>
                 <div className='container max-w-[90vw] relative h-[100vh] mx-auto text-white '>
