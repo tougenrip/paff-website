@@ -1,38 +1,81 @@
 import React, { useRef } from 'react';
-import * as THREE from "three"
-import Stats from "three/examples/jsm/libs/stats.module"
+import * as THREE from "three";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import Stats from "three/examples/jsm/libs/stats.module";
 import Overlay from '../components/overlay';
 
 
 if (window.location.pathname === '/dao') {
-  const scene = new THREE.Scene()
-  
-  const gridHelper = new THREE.GridHelper(10, 10, 0xaec6cf, 0xaec6cf)
-  scene.add(gridHelper)
+
+  var activeCamera;
+  const scene = new THREE.Scene();
+  var model;
+  const gridHelper = new THREE.GridHelper(250, 50, 0xaec6cf, 0xaec6cf);
+  scene.add(gridHelper);
   
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
+  );
+
+  // const camerahelper = new THREE.PerspectiveCamera(
+  //   75,
+  //   window.innerWidth / window.innerHeight,
+  //   0.1,
+  //   1000
+  // );
+  
+  // camerahelper.position.set(0,20,-50);
+  
+  
+  
+  const ambLight = new THREE.AmbientLight(0xffffff, 0.8);
+  scene.add(ambLight);
+  
+  const loader = new GLTFLoader();
+
+  const paffModel = loader.load(
+    "/models/PaffDAO.glb",
+    function (gltf){
+      model = gltf.scene;
+      scene.add(model);
+      scene.scale.set(0.25,0.25,0.25);
+      model.wireframe = true;
+    },
   )
   
-  const renderer = new THREE.WebGLRenderer()
+
+  
+  const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight)
   document.body.appendChild(renderer.domElement)
   renderer.domElement.style.position = 'fixed';
   renderer.domElement.style.top = '0';
-  renderer.domElement.style.zIndex = '-99';
+  renderer.domElement.style.zIndex = '99';
+
+  camera.position.x = -5;
+  camera.position.y = 1;
+  camera.lookAt(0,0,0);
   
-  const geometry = new THREE.BoxGeometry()
-  const material = new THREE.MeshBasicMaterial({
-    color: 0xff0000,
-    wireframe: true
-  })
   
-  const cube = new THREE.Mesh(geometry, material)
-  cube.position.set(0, 0.5, -10)
-  scene.add(cube)
+  
+
+  
+
+  // const geometry = new THREE.BoxGeometry();
+  // const material = new THREE.MeshBasicMaterial({
+    //   color: 0xff0000,
+    //   wireframe: true
+  // });
+  
+  // const cube = new THREE.Mesh(geometry, material);
+  // cube.position.set(0, 0.5, -10);
+  // scene.add(cube);
+
+  
   
   window.addEventListener("resize", onWindowResize, false)
   function onWindowResize() {
@@ -62,65 +105,19 @@ if (window.location.pathname === '/dao') {
   const animationScripts = []
   
   //add an animation that flashes the cube through 100 percent of scroll
-  animationScripts.push({
-    start: 0,
-    end: 101,
-    func: () => {
-      let r = material.color.r
-      r -= 0.05
-      if (r <= 0) {
-        r = 1.0
-      }
-      material.color.r = r
-    }
-  })
+  // animationScripts.push({
+  //   start: 0,
+  //   end: 101,
+  //   func: () => {
+  //     let r = material.color.r
+  //     r -= 0.05
+  //     if (r <= 0) {
+  //       r = 1.0
+  //     }
+  //     material.color.r = r
+  //   }
+  // })
   
-  //add an animation that moves the cube through first 40 percent of scroll
-  animationScripts.push({
-    start: 0,
-    end: 40,
-    func: () => {
-      camera.lookAt(cube.position)
-      camera.position.set(0, 1, 2)
-      cube.position.z = lerp(-10, 0, scalePercent(0, 40))
-      //console.log(cube.position.z)
-    }
-  })
-  
-  //add an animation that rotates the cube between 40-60 percent of scroll
-  animationScripts.push({
-    start: 40,
-    end: 60,
-    func: () => {
-      camera.lookAt(cube.position)
-      camera.position.set(0, 1, 2)
-      cube.rotation.z = lerp(0, Math.PI, scalePercent(40, 60))
-      //console.log(cube.rotation.z)
-    }
-  })
-  
-  //add an animation that moves the camera between 60-80 percent of scroll
-  animationScripts.push({
-    start: 60,
-    end: 80,
-    func: () => {
-      camera.position.x = lerp(0, 5, scalePercent(60, 80))
-      camera.position.y = lerp(1, 5, scalePercent(60, 80))
-      camera.lookAt(cube.position)
-      //console.log(camera.position.x + " " + camera.position.y)
-    }
-  })
-  
-  //add an animation that auto rotates the cube from 80 percent of scroll
-  animationScripts.push({
-    start: 80,
-    end: 101,
-    func: () => {
-      //auto rotate
-      cube.rotation.x += 0.01
-      cube.rotation.y += 0.01
-    }
-  })
   
   function playScrollAnimations() {
     animationScripts.forEach(a => {
@@ -139,12 +136,19 @@ if (window.location.pathname === '/dao') {
         ((document.documentElement.scrollHeight || document.body.scrollHeight) -
           document.documentElement.clientHeight)) *
       100
-    document.getElementById("scrollProgress").innerText =
-      "Scroll Progress : " + scrollPercent.toFixed(2)
+    // document.getElementById("scrollProgress").innerText =
+    //   "Scroll Progress : " + scrollPercent.toFixed(2)
   }
   
   const stats = new Stats()
   document.body.appendChild(stats.dom)
+
+  // const helper = new THREE.CameraHelper( camera );
+  // scene.add(helper);
+
+  // const oc = new OrbitControls ( camerahelper , renderer.domElement );
+
+  
   
   function animate() {
     requestAnimationFrame(animate)
@@ -158,6 +162,8 @@ if (window.location.pathname === '/dao') {
   
   function render() {
     renderer.render(scene, camera)
+    // oc.update();
+  
   }
   
   
