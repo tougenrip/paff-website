@@ -50,7 +50,7 @@ export default function PaffModel(props) {
         <mesh name="characters004" geometry={nodes.characters004.geometry} material={materials.house} />
         <mesh name="characters005" geometry={nodes.characters005.geometry} material={materials.bridge} />
         <mesh name="characters006" geometry={nodes.characters006.geometry} material={materials.tree} />
-        <mesh name="characters007" geometry={nodes.characters007.geometry} material={materials.bush} />
+        <mesh name="characters007" geometry={nodes.characters007.geometry} material={materials.bush}   />
         <mesh name="characters009" geometry={nodes.characters009.geometry} material={materials.terrain_right} />
         <mesh name="characters010" geometry={nodes.characters010.geometry} material={materials.wheat} />
         <mesh name="merged_gate002" geometry={nodes.merged_gate002.geometry} material={materials['final_C.005']} position={[-45.41, -15.33, 0.68]} rotation={[Math.PI, -0.54, Math.PI]} scale={0.7} />
