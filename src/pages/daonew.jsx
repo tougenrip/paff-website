@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import React, {useRef, useState} from 'react'
 import {Canvas, useFrame} from '@react-three/fiber'
-import { Gltf, ScrollControls, useScroll } from '@react-three/drei'
+import { Gltf, ScrollControls, useScroll, Scroll } from '@react-three/drei'
 import {getProject, val} from '@theatre/core'
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
@@ -26,7 +26,11 @@ const DaoNew = () => {
     return(
       <>
         <Canvas id='3d' gl={{ preserveDrawingBuffer: true }} style={{zIndex : "-99 !important", position: "fixed"}} >
-          <ScrollControls pages={5}>
+          <ScrollControls pages={4}>
+            <Scroll html={true} style={{width: '100%'}} >
+              <Overlay/>
+            </Scroll>
+              
               <SheetProvider sheet={demoSheet}>
                <Scene/>
               </SheetProvider>
