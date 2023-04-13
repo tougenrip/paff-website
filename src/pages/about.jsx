@@ -1,6 +1,8 @@
 import React from 'react'
 import "../css/about.css"
 import RoutingButton from '../components/RoutingButton/RoutingButton';
+import book from "../../src/assets/img/about-page/explore-book.jpg";
+import mind from "../../src/assets/img/about-page/mind-map.jpg";
 
 const About = () => {
   return (
@@ -37,10 +39,10 @@ const About = () => {
         <p>Joining the Paff Studios community is simple and straightforward. Start by visiting our website and signing up for our newsletter to stay informed about updates and events. Next, follow us on social media to engage with like-minded individuals and participate in discussions. Finally, attend our workshops, webinars, and community events to fully immerse yourself in the Paff Studios experience.</p>
       </div>
       <div style={{marginTop: "80px"}}>            
-      <RoutingButton width={100} height={400} color="red" text="Mind Map" />
+      <RoutingButton width={100} height={400} color="transperent" text="Mind Map" imageSrc={mind} />
     </div>
     <div style={{marginTop: "80px"}}>            
-      <RoutingButton width={100} height={400} color="blue" text="Explore The Book"  />
+      <RoutingButton width={100} height={400} color="transperent" text="Explore The Book" imageSrc={book}  />
     </div>
 
     </div>

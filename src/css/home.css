@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  background-color: #1e1e1e;
+  height: auto;
+  flex-direction: row;
+  padding: 70px;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.home-container {
+  display: flex;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  box-shadow: none;
+  margin-top: 80px;
+}
+
+.text-container {
+  display: flex;
+  background-color: none;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.text-container p {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 149%;
+  color: white;
+
+  margin-top: 10px;
+}
