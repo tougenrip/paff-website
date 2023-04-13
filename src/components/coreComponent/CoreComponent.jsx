@@ -2,7 +2,7 @@ import React from 'react'
 import "./coreComponent.css"
 
 const CoreComponent = (props) => {
-  const { width, height, color, text, header, imageSrc } = props;
+  const { width, height, color, text, header, imageSrc, objectPosition } = props;
 
   const style = {
     width: `${width}%`,
@@ -59,7 +59,8 @@ const CoreComponent = (props) => {
     height: '100%',
     objectFit: 'cover', 
     zIndex: 0, 
-    objectPosition: "0px 75%",
+    objectPosition: objectPosition,
+
   };
  
   return (

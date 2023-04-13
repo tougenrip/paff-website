@@ -31,14 +31,14 @@ const Core = () => {
   </div>*/}
                 <div style={{marginTop: "80px"}}>
                         <CoreComponent width={100} height={1200} color="transperent" text="At Paff Studios, we are dedicated to providing individuals and organizations with the tools they need to transition seamlessly to the web 3 ecosystem. " header="Create Your Virtual Space 
-                With PAFF HUB" imageSrc={hub}/>
+                With PAFF HUB" objectPosition="0px 45%" imageSrc={hub} />
                 </div>
                 <div style={{marginTop: "80px"}}>            
                 <RoutingButton width={100} height={400} color="transperent" text="Visit PAFF Bar" imageSrc={bar} />
                 </div>
                 <div style={{marginTop: "80px"}}>
                 <CoreComponent width={100} height={1200} color="transperent" text="At Paff Studios, we are dedicated to providing individuals and organizations with the tools they need to transition seamlessly to the web 3 ecosystem. " header="Vote for Future
-                with Paff Society" imageSrc={society}/>
+                with Paff Society" objectPosition="0px 70%" imageSrc={society}/>
                 <div style={{marginTop: "80px"}}>            
                 <RoutingButton width={100} height={400} color="transperent" text="About Studio" imageSrc={bar} />
                 </div>
