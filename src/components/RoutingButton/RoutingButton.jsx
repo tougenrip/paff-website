@@ -35,13 +35,12 @@ const RoutingButton = (props) => {
   const imageStyle = {
     position: 'absolute', // Position image absolutely to fit inside component
     top: 0,
-    left: 0,
+    left: -1,
     width: '100%',
     height: '100%',
     objectFit: 'cover', // Set object-fit to cover to fill component with image
     zIndex: 0, // Add z-index to position image behind text
-    filter: "drop-shadow(0 0 10px #ff7f50)",
-    objectPosition: "center center",
+    objectPosition: "0px 60%",
     
   };
 

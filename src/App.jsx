@@ -6,7 +6,7 @@ import Journey from './pages/journey';
 import Book from './pages/bookinside';
 import CoverBook from './pages/book';
 import DaoNew from './pages/daonew';
-import ProjectsPage from './pages/projects';
+import Core from './pages/core';
 import About from './pages/about';
 import Navbar from './components/navbar';
 
@@ -26,7 +26,7 @@ function App() {
         <Route path='/insidebook' element={<Book/>}/>
         <Route path='/book' element={<CoverBook/>}/>
         <Route path='/dao' element={<DaoNew/>}/>
-        <Route path='/projects' element={<ProjectsPage/>}/>
+        <Route path='/core' element={<Core/>}/>
         <Route path='/about' element={<About/>}/>
       </Routes>
     </BrowserRouter>
