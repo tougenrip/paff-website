@@ -2,7 +2,7 @@ import React from 'react'
 import "./RoutingButton.css"
 
 const RoutingButton = (props) => {
-  const { width, height, color, text, imageSrc } = props;
+  const { width, height, color, text, imageSrc, objectPosition } = props;
 
   const style = {
     width: `${width}%`,
@@ -40,14 +40,32 @@ const RoutingButton = (props) => {
     height: '100%',
     objectFit: 'cover', // Set object-fit to cover to fill component with image
     zIndex: 0, // Add z-index to position image behind text
-    objectPosition: "0px 60%",
+    objectPosition: objectPosition,
     
   };
+
+  const CircleArrow = ({ size = 24, fill = 'black', strokeWidth = 2 }) => {
+    return (
+      <svg width={size} height={size} viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="none" stroke={fill} strokeWidth={strokeWidth} />
+        <path
+          d="M9 15l6-6-6-6"
+          stroke={fill}
+          strokeWidth={strokeWidth}
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  };
+  
 
   return (
     <div style={style} className="rectangle">
       <img src={imageSrc} alt="Component background" style={imageStyle} />
       <div style={textStyle} className="rectangle-text">{text}</div>
+      <div ></div>
     </div>
   );
 }

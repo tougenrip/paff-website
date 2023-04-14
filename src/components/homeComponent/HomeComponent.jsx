@@ -65,6 +65,7 @@ const HomeComponent = (props) => {
   const handleMouseLeave = (event) => {
 
     event.target.style.boxShadow = 'none';
+    event.target.style.opacity = 0.55;
     setHover(false);
   }
 

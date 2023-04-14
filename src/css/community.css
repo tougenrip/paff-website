@@ -1,0 +1,218 @@
+.m-container {
+  display: flex;
+  width: 100%;
+  background-color: #171717;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: none;
+  min-height: 900px;
+  height: auto;
+  padding: 70px;
+}
+
+.back-container {
+  max-width: 100%;
+  max-height: 1000px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.flood-container {
+  display: flex;
+  background-color: transparent;  
+  padding: 20px;  
+  height: 800px;
+  max-width: 770px;  
+}
+
+.max-container {
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+.display-container {
+  display: flex;
+  background-color: transparent;
+  height: 800px;
+  max-width: 770px;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  display: flex;
+  width: 750px;
+  height: 750px;
+  background-color: #1e1e1e;
+  border-radius: 25px;
+}
+
+.header1-container {
+  width: 700px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;  
+  max-height: fit-content;
+  background-color: transparent;
+  align-content: center;
+}
+
+.button-container {
+  width: 700px;
+  height: auto;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container button {
+  width: 300px;
+  height: 50px;
+  background: #de1f26;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.165em;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.header1-container span {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(40px, 2.25vw, 65px);
+  line-height: 94%;
+  color: #ffffff;  
+}
+
+.header1-container p {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(24px, 2.25vw, 28px);
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.details-container span {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(24px, 2.25vw, 38px);
+  line-height: 44px;
+  color: #ffffff;
+}
+
+.details-container p {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(16px, 2.25vw);
+  line-height: 149%;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .flood-container {    
+        height: auto;
+        width: 300px;
+      }
+    .max-container{
+        width: 200px;
+    }
+
+    .m-container {
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .display-container{
+        height: 100%;
+      }
+      .back-container {                
+        width: 300px;
+        flex-wrap: wrap;
+        background-color: transparent;        
+      }
+
+      .details-container {       
+        align-content: center;
+        justify-content: center;         
+        width: 250px;
+        flex-direction: column;
+      }
+    .header1-container{
+        width: 250px;
+    }
+    .display{
+        width: 320px;
+        height: 160px;
+    }
+
+    .button-container{
+        width: 250px;
+    }
+
+    .flood-container{
+        width: auto;
+    }
+}
+
+{/*@media only screen and (max-width: 768px) {
+  .back-container {
+    flex-direction: column;
+    height: auto;
+    width: 720px;
+  }
+
+  .m-container {
+    padding: 30px;
+  }
+
+  .flood-container {
+    flex-direction: column;
+    height: auto;
+    width: fit-content;
+  }
+
+  .header-container {
+    flex-direction: column;   
+    height: auto;   
+    width: 150px;;
+  }
+
+  .details-container {
+    width: 150px;
+    height: auto;
+  }
+}
+*/}

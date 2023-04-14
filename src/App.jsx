@@ -7,6 +7,7 @@ import Book from './pages/bookinside';
 import CoverBook from './pages/book';
 import DaoNew from './pages/daonew';
 import Core from './pages/core';
+import Community from './pages/community';
 import About from './pages/about';
 import Navbar from './components/navbar';
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/journey' element={<Journey/>}/>
+        <Route path='/community' element={<Community/>}/>
         <Route path='/insidebook' element={<Book/>}/>
         <Route path='/book' element={<CoverBook/>}/>
         <Route path='/dao' element={<DaoNew/>}/>

@@ -30,7 +30,7 @@ const Core = () => {
                 </div>
   </div>*/}
                 <div style={{marginTop: "80px"}}>
-                        <CoreComponent width={100} height={1200} color="transperent" text="At Paff Studios, we are dedicated to providing individuals and organizations with the tools they need to transition seamlessly to the web 3 ecosystem. " header="Create Your Virtual Space 
+                <CoreComponent width={100} height={1200} color="transperent" text="At Paff Studios, we are dedicated to providing individuals and organizations with the tools they need to transition seamlessly to the web 3 ecosystem. " header="Create Your Virtual Space 
                 With PAFF HUB" objectPosition="0px 45%" imageSrc={hub} />
                 </div>
                 <div style={{marginTop: "80px"}}>            
@@ -43,7 +43,7 @@ const Core = () => {
                 <RoutingButton width={100} height={400} color="transperent" text="About Studio" imageSrc={bar} />
                 </div>
                 <div style={{marginTop: "80px"}}>            
-                <RoutingButton width={100} height={400} color="transperent" text="Mind Map" imageSrc={mind} />
+                <RoutingButton width={100} height={400} objectPosition="0px 75%" color="transperent" text="Mind Map" imageSrc={mind} />
                 </div>
                 <div style={{marginTop: "80px"}}>            
                 <RoutingButton width={100} height={400} color="transperent" text="Join Community" imageSrc={community} />
