@@ -22,19 +22,50 @@ const Dash = () => {
         <div className='home-container'>  
             <div className='dash-container'>
                 <Link to="/academy" target="_blank">
-                <HomeComponent width={230} height={600} color="transparent" text="ACADEMY" imageSrc={academy} />
+                <HomeComponent 
+                    width={210} 
+                    height={530} 
+                    color="transparent" 
+                    text="ACADEMY" 
+                    boxShadow= '0px 0px 50px 25px #0C2822, 0px 4px 4px 0px #0C2822'
+                    imageSrc={academy} />
+                    
                 </Link>           
                 <Link to="/core" target="_blank">
-                    <HomeComponent width={230} height={600} color="transparent" text="CORE" imageSrc={core} />               
+                    <HomeComponent 
+                    width={210} 
+                    height={530} 
+                    color="transparent" 
+                    text="CORE" 
+                    boxShadow= '0px 0px 50px 25px #221242, 0px 4px 4px 0px #221242'
+                    imageSrc={core} />               
                 </Link>     
                 <Link to="/journey" target="_blank">
-                    <HomeComponent width={230} height={600} color="transparent" text="JOURNEY" imageSrc={journey} />
+                    <HomeComponent 
+                    width={210} 
+                    height={530} 
+                    color="transparent" 
+                    text="JOURNEY"  
+                    boxShadow= '0px 0px 50px 25px #482E21, 0px 4px 4px 0px #62402E'
+                    imageSrc={journey} />
                 </Link>  
                 <Link to="/dao" target="_blank">
-                    <HomeComponent width={230} height={600} color="transparent" text="DAO" imageSrc={dao} />    
+                    <HomeComponent 
+                    width={210} 
+                    height={530} 
+                    color="transparent" 
+                    text="DAO" 
+                    boxShadow= '0px 0px 50px 25px #FF3546 , 0px 4px 4px 0px #FF3546'
+                    imageSrc={dao} />    
                 </Link>   
                 <Link to="/book" target="_blank">
-                    <HomeComponent width={230} height={600} color="transparent" text="BOOK" imageSrc={book} />
+                    <HomeComponent 
+                    width={210} 
+                    height={530} 
+                    color="transparent" 
+                    text="BOOK" 
+                    boxShadow= '0px 0px 50px 25px #302B34, 0px 4px 4px 0px #302B34'                    
+                    imageSrc={book} />
                 </Link>   
             </div>   
             <div className='bottom-container'>

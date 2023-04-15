@@ -61,7 +61,7 @@
   height: auto;
   justify-content: center;
   box-shadow: none;
-  margin-top: 50px;
+  margin-top: 60px;
   flex-direction: column;
 }
 
@@ -72,6 +72,8 @@
   height: auto;
   justify-content: center;
   box-shadow: none;
+  margin-top: 60px;
+  gap: 20px;
 }
 
 .bottom-container {
