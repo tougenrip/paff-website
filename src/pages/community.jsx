@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/community.css"
+import { Link } from 'react-router-dom';
 
 
 const Community = () => {
@@ -21,7 +22,8 @@ const Community = () => {
                         <p>Joining the Paff Studios community is simple and straightforward. Start by visiting our website and signing up for our newsletter to stay informed about updates and events. Next, follow us on social media to engage with like-minded individuals and participate in discussions. Finally, attend our workshops, webinars, and community events to fully immerse yourself in the Paff Studios experience.</p>
                     </div>
                     <div className='button-container'>
-                        <button>JOIN SOCIETY</button>                   
+                    <Link to="https://www.example.com" target="_blank"><button >JOIN SOCIETY</button>      </Link>
+                                     
                     </div>
                 </div>
               

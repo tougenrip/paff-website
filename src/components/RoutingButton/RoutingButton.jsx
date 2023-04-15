@@ -11,7 +11,6 @@ const RoutingButton = (props) => {
     border: '1px solid black',
     borderRadius: '25px',
     boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
-    margin: '10px',
     display: 'flex',
     justifyContent: 'left',
     alignItems: 'center',
