@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Outlet, Route, Routes, Router, BrowserRouter } from "react-router-dom";
 import './App.css';
-import Home from './pages/home';
+import Dash from './pages/dash';
 import Journey from './pages/journey';
 import Book from './pages/bookinside';
 import CoverBook from './pages/book';
@@ -22,7 +22,8 @@ function App() {
     <BrowserRouter>
       { <Navbar/>}
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Dash />} />
+        <Route path='/dash' element={<Dash />} />
         <Route path='/journey' element={<Journey/>}/>
         <Route path='/community' element={<Community/>}/>
         <Route path='/insidebook' element={<Book/>}/>

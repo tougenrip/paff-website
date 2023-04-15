@@ -3,6 +3,7 @@ import "../css/about.css"
 import RoutingButton from '../components/RoutingButton/RoutingButton';
 import book from "../../src/assets/img/about-page/explore-book.jpg";
 import mind from "../../src/assets/img/about-page/mind-map.jpg";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -39,10 +40,12 @@ const About = () => {
         <p>Joining the Paff Studios community is simple and straightforward. Start by visiting our website and signing up for our newsletter to stay informed about updates and events. Next, follow us on social media to engage with like-minded individuals and participate in discussions. Finally, attend our workshops, webinars, and community events to fully immerse yourself in the Paff Studios experience.</p>
       </div>
       <div style={{marginTop: "80px"}}>            
-      <RoutingButton width={100} height={400} color="transperent" text="Mind Map" imageSrc={mind} />
+      <RoutingButton width={100} height={300} color="transperent" text="Mind Map"  objectPosition="0px 70%" imageSrc={mind} />
     </div>
     <div style={{marginTop: "80px"}}>            
-      <RoutingButton width={100} height={400} color="transperent" text="Explore The Book" imageSrc={book}  />
+      <Link to="/book" target="_blank">
+          <RoutingButton width={100} height={300} color="transperent" text="Explore The Book" objectPosition="0px 70%" imageSrc={book} />
+      </Link>  
     </div>
 
     </div>

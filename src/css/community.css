@@ -207,7 +207,8 @@
       }
 }
 
-{/*@media only screen and (max-width: 768px) {
+/*
+@media only screen and (max-width: 768px) {
   .back-container {
     flex-direction: column;
     height: auto;
@@ -235,4 +236,4 @@
     height: auto;
   }
 }
-*/}
+*/
