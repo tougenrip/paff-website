@@ -47,11 +47,11 @@
   width: 100%;
   background-color: #1e1e1e;
   height: auto;
-  padding: 70px;
+  padding: 50px;
   padding-bottom: 0px;
   justify-content: center;
   box-shadow: none;
-  min-height: 900px;
+  min-height: 100vh;
 }
 
 .home-container {

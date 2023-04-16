@@ -1,20 +1,15 @@
 import React from 'react'
 import "../css/home.css"
 import HomeComponent from '../components/homeComponent/HomeComponent';
-import academy from "../../src/assets/img/journey-page/academy.jpg"
-import core from "../../src/assets/img/journey-page/core.jpg"
-import journey from "../../src/assets/img/journey-page/journey.jpg"
-import dao from "../../src/assets/img/journey-page/dao.jpg"
-import book from "../../src/assets/img/journey-page/book.jpg"
+import academy from '../../src/assets/img/dash-page/academy.jpg';
+import core from '../../src/assets/img/dash-page/core.jpg';
+import journey from '../../src/assets/img/dash-page/journey.jpg';
+import dao from '../../src/assets/img/dash-page/dao.jpg';
+import book from '../../src/assets/img/dash-page/book.jpg';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '@fortawesome/fontawesome-free/css/all.css';
-<FontAwesomeIcon icon={['fab', 'discord']} />;
-<FontAwesomeIcon icon={['fab', 'telegram-plane']} />;
-<FontAwesomeIcon icon={['fab', 'linkedin']} />;
-import discord from "../../src/assets/img/icons/discord.svg"
-import telegram from "../../src/assets/img/icons/telegram.svg"
-import linkedin from "../../src/assets/img/icons/linkedin.svg"
+import discord from "../../src/assets/img/icons/discord.svg";
+import telegram from "../../src/assets/img/icons/telegram.svg";
+import linkedin from "../../src/assets/img/icons/linkedin.svg";
 
 const Dash = () => {
   return (

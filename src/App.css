@@ -22,6 +22,11 @@ body {
   font-family: 'Mr Dafoe', cursive;
 }
 
+.wriggle {
+  font-family: 'Wriggle', sans-serif;
+}
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

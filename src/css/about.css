@@ -1,51 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');  
-
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-Thin.ttf') format('truetype');
-  font-weight:100;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-UltraLight.ttf') format('truetype');
-  font-weight:200;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-Light.ttf') format('truetype');
-  font-weight:300;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-Regular.ttf') format('truetype');
-  font-weight:400;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-Medium.ttf') format('truetype');
-  font-weight:500;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-SemiBold.ttf') format('truetype');
-  font-weight:600;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-Bold.ttf') format('truetype');
-  font-weight:700;
-}
-@font-face {
-  font-family: 'Gilroy';
-  src: url('fonts/Gilroy-ExtraBold.ttf') format('truetype');
-  font-weight:800;
-}
-
-
-
-
 .main-container {
   display: flex;
   width: 100%;
@@ -104,3 +56,10 @@
 }
 
 
+.text-filled-with-image {
+  font-size: 60px;
+  background-image: url("https://img.freepik.com/premium-photo/image-colorful-galaxy-sky-generative-ai_791316-9864.jpg?w=2000");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

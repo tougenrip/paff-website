@@ -1,0 +1,104 @@
+.coming-soon-container {
+  display: flex;
+  width: 100%;
+  background-color: #171717;
+  min-height: 100vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.coming-soon {
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center center;
+}
+
+.coming-soon img {
+  position: absolute;
+  left: 0px;
+  opacity: 5%;
+  z-index: 0;
+  object-fit: cover;
+  top: 0;
+
+}
+
+/* Style the content in the middle of the page */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: auto;
+}
+
+h2 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 95px;
+  line-height: 133px;
+  line-height: 100%;
+  letter-spacing: 50%;
+}
+
+.bottom-container {
+  display: flex;
+  background-color: transparent;
+  width: fit-content;
+  height: auto;
+  justify-content: center;
+  box-shadow: none;
+  position: absolute;
+  bottom: 30px;
+}
+
+.social-container {
+  width: 60px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+@font-face {
+    font-family: 'Wriggle';
+    src: url('./Wriggle-Regular.ttf') format('truetype'),
+         url('./Wriggle-Bold.ttf') format('truetype');
+    /* Add additional font weights/styles as needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Apply Wriggle font to desired elements */
+  .wriggle {
+    font-family: 'Wriggle', sans-serif;
+  }
+  
+
+  @font-face {
+    font-family: "Wriggle";
+    src: url("../css/fonts/Wriggle-Regular.otf") format("truetype");
+    font-weight: 800;
+  }
+  
