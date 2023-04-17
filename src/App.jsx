@@ -10,9 +10,10 @@ import Home from './pages/home';
 import Journey from './pages/journey';
 import Book from './pages/bookinside';
 import CoverBook from './pages/book';
-import DaoNew from './pages/daonew';
 import ProjectsPage from './pages/projects';
 import Navbar from './components/navbar';
+import DaoNew, { MindMap } from './pages/threejsbased';
+import ComingSoon from './pages/comingsoon';
 
 
 
@@ -30,7 +31,9 @@ function App() {
         <Route path='/insidebook' element={<Book/>}/>
         <Route path='/book' element={<CoverBook/>}/>
         <Route path='/dao' element={<DaoNew/>}/>
-        <Route path='/projects' element={<ProjectsPage/>}/>     
+        <Route path='/projects' element={<ProjectsPage/>}/>  
+        <Route path='/mindmap' element={<MindMap/>}/>
+        <Route path='/soon' element={<ComingSoon/>}/>
       </Routes>
     </Router>
       
