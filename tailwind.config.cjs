@@ -17,7 +17,8 @@ module.exports = {
     fontFamily:{
       'Jura': ['Jura', 'sans-serif'],
       'Inter': ['Inter', 'sans-serif'],
-      'Gilroy': ['Gilroy', 'sans-serif']
+      'Gilroy': ['Gilroy', 'sans-serif'],
+      'dafoe' : ['Mr Dafoe']
     },
     backgroundImage:{
       'Hero': "url('assets/img/hero.webp')",

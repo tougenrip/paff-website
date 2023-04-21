@@ -1,0 +1,65 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  background-color: #1e1e1e;
+  height: auto;
+  flex-direction: column;
+  padding: 70px;
+}
+
+.header-container {
+  display: flex;
+  background-color: none;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: left;
+  
+}
+
+.header-container a {
+  font-size: 90px;
+  color: white;
+  margin-left: 14px;
+  font-weight: 400;
+}
+
+.text-container {
+  display: flex;
+  background-color: none;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.text-container a {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 149%;
+  color: white;
+}
+
+.text-container p {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 149%;
+  color: white;
+
+  margin-top: 10px;
+}
+
+
+.text-filled-with-image {
+  font-size: 60px;
+  background-image: url("https://img.freepik.com/premium-photo/image-colorful-galaxy-sky-generative-ai_791316-9864.jpg?w=2000");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
