@@ -14,6 +14,9 @@ import ProjectsPage from './pages/projects';
 import Navbar from './components/navbar';
 import DaoNew, { MindMap } from './pages/threejsbased';
 import ComingSoon from './pages/comingsoon';
+import { WalletLinkConnector } from "@web3-react/walletlink-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
+import { InjectedConnector } from "@web3-react/injected-connector";
 
 
 
@@ -26,17 +29,16 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home/>} />
         <Route path='/journey' element={<Journey/>}/>
         <Route path='/insidebook' element={<Book/>}/>
         <Route path='/book' element={<CoverBook/>}/>
         <Route path='/dao' element={<DaoNew/>}/>
-        <Route path='/projects' element={<ProjectsPage/>}/>  
+        <Route path='/projects' element={<ProjectsPage/>}/>
         <Route path='/mindmap' element={<MindMap/>}/>
         <Route path='/soon' element={<ComingSoon/>}/>
       </Routes>
     </Router>
-      
     </>
   )
 }

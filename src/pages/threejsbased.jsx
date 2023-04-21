@@ -15,7 +15,7 @@ var daoSheet = getProject('Demo Project', {state: mindmapState}).sheet('Demo She
 var mindmapsheet = getProject('MindMap').sheet("MMSheet")
 
 
-if (window.location.pathname === '/dao' )  {
+if (window.location.pathname === '/daosesesedadwa' )  {
   
   studio.initialize()
   studio.extend(extension)
@@ -47,7 +47,7 @@ export const MindMap = () => {
           <MindMapScene/>
         </SheetProvider>
       </Canvas>
-      </>
+    </>
   )
 }
 
@@ -84,6 +84,9 @@ function MindMapScene() {
           <Stars/>
           <e.mesh theatreKey='cube'>
             <sphereGeometry position={[0,0,5]} scale={[2,2,2]}/>
+            <sphereGeometry position={[0,5,5]} scale={[2,2,2]}/>
+            <sphereGeometry position={[5,0,5]} scale={[2,2,2]}/>
+            <sphereGeometry position={[5,5,5]} scale={[2,2,2]}/>
             <meshBasicMaterial color={0xffffff}/>
           </e.mesh>
         <e.ambientLight theatreKey='light'/>
