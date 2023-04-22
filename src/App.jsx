@@ -6,7 +6,7 @@ import Journey from './pages/journey';
 import Book from './pages/bookinside';
 import CoverBook from './pages/book';
 import DaoNew from './pages/threejsbased';
-import ComingSoon from './pages/coming-soon';
+import ComingSoon from './pages/comingsoon';
 import Core from './pages/core';
 import Community from './pages/community';
 import About from './pages/about';
