@@ -15,7 +15,7 @@ var daoSheet = getProject('Demo Project', {state: mindmapState}).sheet('Demo She
 var mindmapsheet = getProject('MindMap').sheet("MMSheet")
 
 
-if (window.location.pathname === '/daosesesedadwa' )  {
+if (window.location.pathname === '/daosesesedad' )  {
   
   studio.initialize()
   studio.extend(extension)
