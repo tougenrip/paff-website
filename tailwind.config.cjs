@@ -22,7 +22,7 @@ module.exports = {
     },
     backgroundImage:{
       'Hero': "url('assets/img/hero.webp')",
-      'Journey': "url('assets/img/journey.jpg')",
+      'Journey': "url('assets/img/journey.webp')",
       'Book': "url('assets/img/book.webp')",
       'BookSec1': "url('assets/img/bookSec1.webp')",
       'BookSec2': "url('assets/img/bookSec2.webp')",

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion"
 import "./homeComponent.css"
 
 const HomeComponent = (props) => {
@@ -46,12 +47,13 @@ const HomeComponent = (props) => {
   };
 
   const hoverStyle = {
-    transform: 'scale(1.15,1.25)',
+    // transform: 'scale(1.15,1.25)',
     border: border,
     boxShadow: boxShadow,
     borderRadius: '25px',
     filter: 'brightness(1.5)', 
     border: 'none',
+    opacity: '1',
   }
 
   const handleMouseEnter = (event) => {
@@ -68,9 +70,15 @@ const HomeComponent = (props) => {
   const [isHovered, setHover] = React.useState(false);
 
   return (
+    <motion.div
+      initial={{ scale:1 }}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 200, duration: 0.2  }}
+    >
     <div
-      style={{ ...style, ...(isHovered ? hoverStyle : {}) }}
-      className="rectangle"
+      style={{ ...style, ...(isHovered ? hoverStyle : {opacity: 0.7}) }}
+      className="rectangle ease-in transform-gpu"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -79,6 +87,7 @@ const HomeComponent = (props) => {
       <div props={boxShadow}  style={hoverStyle}></div>
       <div props={border}  style={hoverStyle}></div>
     </div>
+    </motion.div>
   );
 };
 

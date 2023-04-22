@@ -5,14 +5,16 @@ import Dash from './pages/dash';
 import Journey from './pages/journey';
 import Book from './pages/bookinside';
 import CoverBook from './pages/book';
-import DaoNew from './pages/daonew';
+import DaoNew from './pages/threejsbased';
 import ComingSoon from './pages/coming-soon';
 import Core from './pages/core';
 import Community from './pages/community';
 import About from './pages/about';
 import Navbar from './components/navbar';
 import ComingSoonNavbar from './components/comingSoonNav';
-
+import { WalletLinkConnector } from "@web3-react/walletlink-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
+import { InjectedConnector } from "@web3-react/injected-connector";
 
 
 
