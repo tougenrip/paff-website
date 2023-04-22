@@ -8,7 +8,6 @@ import CoverBook from './pages/book';
 import DaoNew from './pages/threejsbased';
 import ComingSoon from './pages/coming-soon';
 import Core from './pages/core';
-import ProjectsPage from './pages/projects';
 import Community from './pages/community';
 import About from './pages/about';
 import Navbar from './components/navbar';
