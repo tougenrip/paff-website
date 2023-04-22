@@ -12,10 +12,6 @@ import Community from './pages/community';
 import About from './pages/about';
 import Navbar from './components/navbar';
 import ComingSoonNavbar from './components/comingSoonNav';
-import { WalletLinkConnector } from "@web3-react/walletlink-connector";
-import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
-import { InjectedConnector } from "@web3-react/injected-connector";
-
 
 
 
@@ -38,7 +34,7 @@ function App() {
           <Route path='/dao' element={<DaoNew/>}/>
           <Route path='/core' element={<Core/>}/>
           <Route path='/about' element={<About/>}/>
-          <Route path='/comingsoon' element={<ComingSoon/>}/>
+          <Route path='/soon' element={<ComingSoon/>}/>
         </Routes>
       </BrowserRouter>
     </>

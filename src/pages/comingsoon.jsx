@@ -14,9 +14,9 @@ export default function ComingSoon() {
           <VideoText position={[0, 1.3, -2]} />
           <Ground />
         </group>
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={0.9} color={'red'}/>
         <spotLight position={[8, 10, -5]} intensity={0.8} color={'red'}/>
-        <directionalLight position={[-0, 0, -40]} intensity={0.9} />
+        <directionalLight position={[-0, 0, -40]} intensity={0.9} color={'red'} />
         <Intro />
       </Suspense>
     </Canvas>
@@ -44,8 +44,8 @@ function VideoText(props) {
 function Ground() {
   const [floor, normal] = useTexture(['public/SurfaceImperfections003_1K_var1.jpg', 'public/SurfaceImperfections003_1K_Normal.jpg'])
   return (
-    <Reflector blur={[400, 100]} resolution={1024} args={[10, 10]} mirror={0.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
-      {(Material, props) => <Material color="#a0a0a0" metalness={.6} roughnessMap={floor} normalMap={normal} normalScale={[1, 1]} {...props} />}
+    <Reflector blur={[400, 100]} resolution={1024} args={[20, 20]} mirror={.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
+      {(Material, props) => <Material color="#a0a0a0" metalness={.9} roughnessMap={floor} normalMap={normal} normalScale={[1, 1]} {...props} />}
     </Reflector>
   )
 }

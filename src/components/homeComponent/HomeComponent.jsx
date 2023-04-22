@@ -1,9 +1,14 @@
 import React from 'react'
+import useSound from 'use-sound'
+import selectSfx from '../../sounds/sfx/selectSfx.wav'
+import hoverSfx from '../../sounds/sfx/hoverSfx.wav'
 import { motion } from "framer-motion"
 import "./homeComponent.css"
 
 const HomeComponent = (props) => {
   const { width, height, color, text, imageSrc, boxShadow, border } = props;
+  const [selectPlay] = useSound(selectSfx);
+  const [hoverPlay] = useSound(hoverSfx, {volume:0.5, playbackRate:2})
 
   const style = {
     width: `${width}px`,
@@ -57,7 +62,7 @@ const HomeComponent = (props) => {
   }
 
   const handleMouseEnter = (event) => {
-
+    hoverPlay();
     setHover(true);
   }
 
@@ -65,6 +70,9 @@ const HomeComponent = (props) => {
 
   
     setHover(false);
+  }
+  const handleMouseClick = (event) => {
+    selectPlay();
   }
 
   const [isHovered, setHover] = React.useState(false);
@@ -79,6 +87,7 @@ const HomeComponent = (props) => {
     <div
       style={{ ...style, ...(isHovered ? hoverStyle : {opacity: 0.7}) }}
       className="rectangle ease-in transform-gpu"
+      onClick={handleMouseClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
