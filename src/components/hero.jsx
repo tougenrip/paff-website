@@ -1,4 +1,6 @@
 import React from 'react'
+import HomeComponent from '../components/homeComponent/HomeComponent';
+
 const Hero = () => {
     return (
       <div className="hero  font-Gilroy font-semibold text-white w-full align-middle transform-gpu">

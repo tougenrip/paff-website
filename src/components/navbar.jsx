@@ -5,10 +5,11 @@ import Button from './button';
 
 const Navbar = () => {
     let Links =[
+        {name:"DASH",link:"/dash"},
         {name:"JOURNEY",link:"/journey"},
         {name:"BOOK",link:"/book"},
         {name:"DAO",link:"/dao"},
-        {name:"PROJECTS",link:"/projects"},
+        {name:"CORE",link:"/core"},
       ];
       
       let [open,setOpen]=useState(false);

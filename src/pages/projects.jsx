@@ -1,16 +1,14 @@
-import React from 'react'
-
-const ProjectsPage = () => {
-  return (
-    <>
+    
+    {/*<>
         <section id='productspage'>
             <div className='container relative h-[30vh] mx-auto text-white font-Gilroy'>
                 <div className='row absolute top-2/3 left-14'>
                     <div className='font-extrabold text-4xl lg:text-8xl'>
-                        <h1>Projects</h1>
+                        <h1>Core</h1>
                     </div>
                 </div>
             </div>
+            <CoreComponent></CoreComponent>
 
             <div className='container relative h-[80vh] mx-auto text-white font-Gilroy '>
                 <div className='relative top-20 h-2/3 p-10 rounded-[25px] mx-5 bg-orange-400 '>
@@ -83,8 +81,4 @@ const ProjectsPage = () => {
                 </div>
             </div>
         </section>
-    </>
-    )
-}
-
-export default ProjectsPage
+  </>*/}
