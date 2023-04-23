@@ -6,6 +6,8 @@ import discord from "../../src/assets/img/icons/discord.svg";
 import telegram from "../../src/assets/img/icons/telegram.svg";
 import linkedin from "../../src/assets/img/icons/linkedin.svg";
 import '../css/comingsoon.css'
+import '../css/fonts/Wriggle-Regular.otf'
+
 
 const ComingSoon = () => {
   return (
