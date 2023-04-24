@@ -3,7 +3,9 @@ import "../css/about.css"
 import RoutingButton from '../components/RoutingButton/RoutingButton';
 import book from "../../src/assets/img/about-page/explore-book.jpg";
 import mind from "../../src/assets/img/about-page/mind-map.jpg";
+import com from "../../src/assets/img/about-page/community.webp";
 import { Link } from 'react-router-dom';
+
 
 const About = () => {
   return (

@@ -7,6 +7,7 @@ import Book from './pages/bookinside';
 import CoverBook from './pages/book';
 import DaoNew from './pages/threejsbased';
 import ComingSoon from './pages/comingsoon';
+import ComingSoonAlt from './pages/coming-soon';
 import Vote from './pages/vote';
 import Core from './pages/core';
 import User from './pages/user';
@@ -28,7 +29,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        { location.pathname === '/comingsoon' ? <ComingSoonNavbar /> : <Navbar /> } {/* conditionally render the specialized navbar */}
+        { location.pathname === '/soon' ? <ComingSoonNavbar /> : <Navbar /> } {/* conditionally render the specialized navbar */}
         <Routes>
           <Route path='/' element={<Dash />} />
           <Route path='/dash' element={<Dash />} />
@@ -40,6 +41,7 @@ function App() {
           <Route path='/core' element={<Core/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/soon' element={<ComingSoon/>}/>
+          <Route path='/soonalt' element={<ComingSoonAlt/>}/>
           <Route path='/journeyold' element={<JourneyOld/>}/>
           <Route path='/user' element={<User/>}/>
           <Route path='/vote' element={<Vote/>}/>

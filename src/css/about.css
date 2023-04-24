@@ -58,8 +58,9 @@
 
 .text-filled-with-image {
   font-size: 60px;
-  background-image: url("https://img.freepik.com/premium-photo/image-colorful-galaxy-sky-generative-ai_791316-9864.jpg?w=2000");
+  background-image: url("../../src/assets/img/about-page/community.webp");
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+

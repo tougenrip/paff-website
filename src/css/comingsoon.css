@@ -81,15 +81,7 @@ h2 {
   opacity: 1;
 }
 
-@font-face {
-    font-family: 'Wriggle';
-    src: url('./Wriggle-Regular.ttf') format('truetype'),
-         url('./Wriggle-Bold.ttf') format('truetype');
-    /* Add additional font weights/styles as needed */
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+
   /* Apply Wriggle font to desired elements */
   .wriggle {
     font-family: 'Wriggle', sans-serif;
