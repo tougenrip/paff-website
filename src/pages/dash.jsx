@@ -8,7 +8,7 @@ import dao from '../../src/assets/img/dash-page/dao.jpg';
 import book from '../../src/assets/img/dash-page/book.jpg';
 import { Link } from 'react-router-dom';
 import discord from "../../src/assets/img/icons/discord.svg";
-import telegram from "../../src/assets/img/icons/telegram.svg";
+import twitter from "../../src/assets/img/icons/twitter.svg";
 import linkedin from "../../src/assets/img/icons/linkedin.svg";
 
 const Dash = () => {
@@ -16,7 +16,7 @@ const Dash = () => {
       <div className='main-container'>      
         <div className='home-container'>  
             <div className='dash-container'>
-                <Link to="/academy" target="_blank">
+                <Link to="/academy">
                 <HomeComponent 
                     width={210} 
                     height={530} 
@@ -26,7 +26,7 @@ const Dash = () => {
                     imageSrc={academy} />
                     
                 </Link>           
-                <Link to="/core" target="_blank">
+                <Link to="/core">
                     <HomeComponent 
                     width={210} 
                     height={530} 
@@ -35,7 +35,7 @@ const Dash = () => {
                     boxShadow= '0px 0px 50px 25px #221242, 0px 4px 4px 0px #221242'
                     imageSrc={core} />               
                 </Link>     
-                <Link to="/journey" target="_blank">
+                <Link to="/journey" >
                     <HomeComponent 
                     width={210} 
                     height={530} 
@@ -44,7 +44,7 @@ const Dash = () => {
                     boxShadow= '0px 0px 50px 25px #482E21, 0px 4px 4px 0px #62402E'
                     imageSrc={journey} />
                 </Link>  
-                <Link to="/dao" target="_blank">
+                <Link to="/vote">
                     <HomeComponent 
                     width={210} 
                     height={530} 
@@ -53,7 +53,7 @@ const Dash = () => {
                     boxShadow= '0px 0px 50px 25px #FF3546 , 0px 4px 4px 0px #FF3546'
                     imageSrc={dao} />    
                 </Link>   
-                <Link to="/book" target="_blank">
+                <Link to="/book">
                     <HomeComponent 
                     width={210} 
                     height={530} 
@@ -65,9 +65,15 @@ const Dash = () => {
             </div>   
             <div className='bottom-container'>
                 <div className='social-container'>
-                    <img src={discord} className='icon' />
-                    <img src={telegram} className='icon'/>
+                    <Link to="https://discord.gg/paff" target='_blank'>
+                    <img src={discord} className='icon'/>
+                    </Link>
+                    <Link to="https://twitter.com/PaffStudios" target='_blank'>
+                    <img src={twitter} className='icon'/>
+                    </Link>
+                    <Link to="https://www.linkedin.com/company/paff-creative-studios/?originalSubdomain=tr" target='_blank'>
                     <img src={linkedin} className='icon'/>                
+                    </Link>
                 </div> 
             </div>
         </div>      

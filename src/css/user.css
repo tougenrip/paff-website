@@ -1,0 +1,155 @@
+.user-main-container {
+  width: 100%;
+  height: 972px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  background: #171717;
+}
+
+.user-container {
+  background-color: transparent;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  gap: 60px;
+}
+
+.user-profile-container {
+  width: 100%;
+  height: 180px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.user-id-container {
+  width: 400px;
+  height: 180px;
+  background: #22222273;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.user-id-container p {
+  font-family: Gilroy;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.user-id-container a {
+  font-family: Gilroy;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.user-details-container {
+  width: 1400px;
+  height: 180px;
+  background: #22222273;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+
+.line {
+  width: 38px;
+  height: 0px;
+  border: 2px solid #ffffff;
+  transform: rotate(90deg);
+  border-radius: 10px;
+}
+
+.balance-container {
+  background-color: transparent;
+  height: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.balance-container p {
+  font-family: Gilroy;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.balance-container a {
+  font-family: Gilroy;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.user-nft-container {
+  width: 100%;
+  height: 700px;
+  background: #22222273;
+  border-radius: 16px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
+  overflow-x: scroll;
+  padding: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.user-nft-container .nft-frame {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.nft-frame {
+  width: 100%;
+  height: auto;
+  background-color: #d9d9d9;
+}
+
+@media only screen and (max-width: 768px) {
+  .user-container {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+}

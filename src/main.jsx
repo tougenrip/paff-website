@@ -15,6 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
     <Web3ReactProvider getLibrary={getLibrary}>
       <App/>
-    </Web3ReactProvider>
-  ,
+    </Web3ReactProvider>,
 )
+
+
+

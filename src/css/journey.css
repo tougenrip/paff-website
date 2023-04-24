@@ -1,20 +1,243 @@
-.background {
+.background1 {
   position: relative;
   width: 100%;
+  height: 100%;
   min-height: 100vh;
 }
+
+
 
 .background-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Make the image cover the entire container */
+  object-fit: cover; /* Stretch the image to cover the container while maintaining aspect ratio */
   z-index: 0; /* Place the image behind the content */
+  object-position: center top;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
 }
 
-.content {
-  position: absolute;
+.main-container1 {
+  display: flex;
   width: 100%;
+  background-color: #1e1e1e;
+  height: auto;
+  padding: 50px;
+  padding-bottom: 0px;
+  justify-content: center;
+  box-shadow: none;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.main-container2 {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 0px;
+  min-height: 100vh;
+}
+
+.content1 {
+  position: relative;
+  width: 100%;
+  height: auto;
   text-align: center;
-  z-index: 2; /* Place the content in front of the image */
+  z-index: 1;
+  padding: 0x;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-color: transparent;
+  gap: 750px;
+  flex-wrap: wrap
+}
+
+.content1-container {
+  background-color: transparent;
+  width: 100%;
+  max-width: 1800px;
+  height: 250px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.headerA-container {
+  background-color: transparent;
+  z-index: 1;
+  width: 1500px;
+  max-width: 100%;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.headerA-container p {
+  font-family: Gilroy;
+  font-size: 85px;
+  font-weight: 300;
+  line-height: 98px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+
+.headerB-container {
+  background-color: transparent;
+  z-index: 1;
+  width: 1500px;
+  max-width: 100%;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.headerB-container p {
+  font-family: Gilroy;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 147px;
+  letter-spacing: 0em;
+  color: #fff;
+  text-align: left;
+}
+
+.title-container {
+  background-color: transparent;
+  z-index: 1;
+  width: 1800px;
+  max-width: 100%;
+  height: 120px;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+}
+
+.title-container p {
+  font-family: Gilroy;
+  font-size: 65px;
+  font-weight: 800;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+.paragraph-container {
+  background-color: transparent;
+  z-index: 1;
+  width: 1500px;
+  max-width: 100%;
+  height: 120px;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.paragraph-container p {
+  font-family: Gilroy;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+
+.paragraph-container1 {
+  background-color: transparent;
+  z-index: 1;
+  width: 1100px;
+  height: 120px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.paragraph-container1 p {
+  font-family: Gilroy;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+}
+
+.headerC-container {
+  background-color: transparent;
+  z-index: 1;
+  max-width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.headerC-container p {
+  font-family: Gilroy;
+  font-size: 85px;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (max-width: 480px) {
+  .headerA-container p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  .headerB-container p {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .title-container p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  .paragraph-container p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .content1 {
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+  }
+
+  .background-image{
+ display: none;
+  }
+
+  .main-container1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+  }
+  .main-container2 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 100px;
+    display: contents;
+  }
+
+
 }

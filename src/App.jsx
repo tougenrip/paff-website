@@ -7,11 +7,16 @@ import Book from './pages/bookinside';
 import CoverBook from './pages/book';
 import DaoNew from './pages/threejsbased';
 import ComingSoon from './pages/comingsoon';
+import Vote from './pages/vote';
 import Core from './pages/core';
+import User from './pages/user';
 import Community from './pages/community';
+import JourneyOld from './pages/journey-old';
 import About from './pages/about';
 import Navbar from './components/navbar';
 import ComingSoonNavbar from './components/comingSoonNav';
+
+
 
 
 
@@ -35,6 +40,9 @@ function App() {
           <Route path='/core' element={<Core/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/soon' element={<ComingSoon/>}/>
+          <Route path='/journeyold' element={<JourneyOld/>}/>
+          <Route path='/user' element={<User/>}/>
+          <Route path='/vote' element={<Vote/>}/>
         </Routes>
       </BrowserRouter>
     </>
