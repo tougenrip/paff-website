@@ -29,9 +29,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        { location.pathname === '/soon' ? <ComingSoonNavbar /> : <Navbar /> } {/* conditionally render the specialized navbar */}
+      {/*{ location.pathname === '/soon' ? <ComingSoonNavbar /> : <Navbar /> } /* conditionally render the specialized navbar */}
+      <ComingSoonNavbar /> 
         <Routes>
-          <Route path='/' element={<Dash />} />
+          <Route path='/' element={<ComingSoon />} />
           <Route path='/dash' element={<Dash />} />
           <Route path='/journey' element={<Journey/>}/>
           <Route path='/community' element={<Community/>}/>
