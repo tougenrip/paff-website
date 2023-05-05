@@ -222,7 +222,7 @@
   }
 
   .background-image{
- display: none;
+ display: flex;
   }
 
   .main-container1{

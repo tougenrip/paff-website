@@ -2,52 +2,47 @@ import React from 'react'
 import "./coreComponent.css"
 
 const CoreComponent = (props) => {
-  const { width, height, color, text, header, imageSrc, objectPosition } = props;
+  const { width, height, color, text, header, imageSrc, objectPosition, borderRadius } = props;
 
   const style = {
     width: `${width}%`,
     height: `${height}px`,
     backgroundColor: color,  
-    borderRadius: '25px',   
+    borderRadius: `${borderRadius}px`,  
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'start',
-    alignItems: 'center',
-    position: 'relative', // Add position relative to position image inside
-    overflow: 'hidden', // Add overflow hidden to hide image outside of component
+    justifyContent: 'space-between',
+    alignItems: 'start',
+    position: 'relative',
+    overflow: 'hidden',
     cursor: 'pointer',
-    padding: 250,
+    padding: 20,
   };
 
   const headerStyle = {
     color: 'white',
-    textAlign: 'center',
-    fontSize: '96px',
+    textAlign: 'left',
+    fontSize: 'clamp(26px, 3.5vw, 90px)',
     fontFamily: 'Gilroy',
     fontWeight: '800',
     fontStyle: 'normal',
-    top: 50,
-    left: 50,
-    right: 250,
     position: 'absolute', // Add position relative to position text inside
     zIndex: 1, // Add z-index to position text above image
     justifyContent: "flex-start",
+
   };
 
   const textStyle = {
     color: 'white',
-    textAlign: 'center',
-    fontSize: '56px',
+    textAlign: 'left',
+    fontSize: 'clamp(16px, 3.25vw, 50px)',
     fontFamily: 'Gilroy',
     fontWeight: '300',
     fontStyle: 'normal',
-    lineHeight: "59px",
-    bottom: 150,
-    left: 20,
-    right: 20,
     position: 'absolute', // Add position relative to position text inside
-    zIndex: 1, // Add z-index to position text above image
-  
+    zIndex: 1, // Add z-index to position text above image  
+    bottom: 20,
+    ...props.style 
   };
 
   const imageStyle = {
@@ -59,9 +54,11 @@ const CoreComponent = (props) => {
     objectFit: 'cover', 
     zIndex: 0, 
     objectPosition: objectPosition,
-
+    
   };
  
+
+
   return (
     <div style={style} className="rectangle">
       <img src={imageSrc} alt="Component background" style={imageStyle} />
@@ -72,4 +69,4 @@ const CoreComponent = (props) => {
 };
 
 
-export default CoreComponent
+export default CoreComponent;

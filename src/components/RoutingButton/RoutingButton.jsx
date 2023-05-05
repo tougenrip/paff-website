@@ -2,20 +2,20 @@ import React from 'react'
 import "./RoutingButton.css"
 
 const RoutingButton = (props) => {
-  const { width, height, color, text, imageSrc, objectPosition } = props;
+  const { width, height, color, text, imageSrc, objectPosition, borderRadius } = props;
 
   const style = {
     width: `${width}%`,
     height: `${height}px`,
     backgroundColor: color,
     border: '1px solid black',
-    borderRadius: '25px',
+    borderRadius: `${borderRadius}px`,
     boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
     display: 'flex',
     justifyContent: 'left',
+    justifyItems: 'center',
     alignItems: 'center',
-    padding: '75px',
-    alignItems: 'center',
+    paddingLeft: '3%',
     position: 'relative', // Add position relative to position image inside
     overflow: 'hidden', // Add overflow hidden to hide image outside of component
     cursor: 'pointer',
@@ -25,10 +25,11 @@ const RoutingButton = (props) => {
   const textStyle = {
     color: 'white',
     textAlign: 'center',
-    fontSize: '90px',
+    fontSize: 'clamp(26px, 2.25vw, 90px)',
     fontFamily: 'Gilroy',
     fontWeight: '800',
     zIndex: 1, // Add z-index to position text above image
+    
   };
 
   const imageStyle = {
@@ -40,6 +41,7 @@ const RoutingButton = (props) => {
     objectFit: 'cover', // Set object-fit to cover to fill component with image
     zIndex: 0, // Add z-index to position image behind text
     objectPosition: objectPosition,
+    borderRadius: 'none',
     
   };
 

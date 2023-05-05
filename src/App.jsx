@@ -30,7 +30,7 @@ function App() {
     <>
       <BrowserRouter>
       {/*{ location.pathname === '/soon' ? <ComingSoonNavbar /> : <Navbar /> } /* conditionally render the specialized navbar */}
-      <ComingSoonNavbar /> 
+      {/*<ComingSoonNavbar /> */}
         <Routes>
           <Route path='/' element={<ComingSoon />} />
           <Route path='/dash' element={<Dash />} />

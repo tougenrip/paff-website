@@ -50,7 +50,8 @@ const Vote = () => {
             </div>
           </button>
               
-    </div>
+    </div>  
+    
   )
 };
 
