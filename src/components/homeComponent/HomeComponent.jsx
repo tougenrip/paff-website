@@ -37,6 +37,7 @@ const HomeComponent = (props) => {
     bottom: 15,
     position: 'absolute', // Add position relative to position text inside
     zIndex: 2, // Add z-index to position text above image
+    ...props.style
   
   };
 

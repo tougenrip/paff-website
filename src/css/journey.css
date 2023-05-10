@@ -1,29 +1,8 @@
-.background1 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-}
-
-
-
-.background-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Stretch the image to cover the container while maintaining aspect ratio */
-  z-index: 0; /* Place the image behind the content */
-  object-position: center top;
-  background-repeat: no-repeat;
-  transform: scaleX(-1);
-}
-
 .main-container1 {
   display: flex;
   width: 100%;
-  background-color: #1e1e1e;
+  background-color: transparent;
   height: auto;
-  padding: 50px;
   padding-bottom: 0px;
   justify-content: center;
   box-shadow: none;
@@ -31,12 +10,12 @@
   flex-wrap: wrap;
 }
 
+
 .main-container2 {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
   padding-bottom: 0px;
   min-height: 100vh;
 }
@@ -54,7 +33,7 @@
   align-content: center;
   background-color: transparent;
   gap: 750px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .content1-container {
@@ -119,7 +98,6 @@
   z-index: 1;
   width: 1800px;
   max-width: 100%;
-  height: 120px;
   justify-content: center;
   align-items: flex-end;
   display: flex;
@@ -195,49 +173,58 @@
 @media only screen and (max-width: 480px) {
   .headerA-container p {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 0px;
   }
-  
+
+  .paragraph-container{
+    height: auto;
+  }
+
+  .headerA-container{
+    
+  }
+
+  .headerB-container{
+    height: auto;
+  }
   .headerB-container p {
+    font-size: 40px;
+    line-height: 0px;
+  }
+
+  .headerC-container p {
     font-size: 40px;
     line-height: 50px;
   }
-  
+
   .title-container p {
     font-size: 30px;
     line-height: 40px;
   }
-  
+
   .paragraph-container p {
     font-size: 20px;
     line-height: 30px;
   }
-  
+
   .content1 {
-    gap: 50px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    
-  }
-
-  .background-image{
- display: none;
-  }
-
-  .main-container1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-  }
-  .main-container2 {
     flex-direction: row;
+    gap: 200px; 
+
+  }
+
+  .main-container1 {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .main-container2 {
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 50px 100px;
-    display: contents;
+    display: flex;
   }
-
-
 }

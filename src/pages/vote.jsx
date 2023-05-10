@@ -110,7 +110,8 @@ const Vote = () => {
             </div>
           </div>
               
-    </div>
+    </div>  
+    
   )
 };
 

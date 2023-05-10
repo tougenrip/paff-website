@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className='main-container'>
+    <div className='container mx-auto p-4 '>
       <div className='header-container'>
+        <p>INTRODUCTION</p>
         <a className='mr-dafoe'>About Studio</a>
       </div>
       <div className='text-container'>
@@ -25,6 +26,7 @@ const About = () => {
         </p>
       </div>
       <div className='header-container'>
+      <span>PEOPLE ARE</span>
         <a className='mr-dafoe'>Followıng Future</a>
       </div>
       <div className='text-container'>
@@ -42,11 +44,11 @@ const About = () => {
         <p>Joining the Paff Studios community is simple and straightforward. Start by visiting our website and signing up for our newsletter to stay informed about updates and events. Next, follow us on social media to engage with like-minded individuals and participate in discussions. Finally, attend our workshops, webinars, and community events to fully immerse yourself in the Paff Studios experience.</p>
       </div>
       <div style={{marginTop: "80px"}}>            
-      <RoutingButton width={100} height={300} color="transperent" text="Mind Map"  objectPosition="0px 70%" imageSrc={mind} />
+      <RoutingButton width={100} height={350} borderRadius={12} color="transperent" text="Mind Map"  objectPosition="0px 70%" imageSrc={mind} style={{fontSize: '90px', lineHeight: '110px', fontWeight: '800'}} boxShadow="5px 5px 30px 3px #CD0022 , -5px -5px 30px 3px #2E1A26"/>
     </div>
-    <div style={{marginTop: "80px"}}>            
+    <div style={{marginTop: "80px", marginBottom: '150px'}}>            
       <Link to="/book" target="_blank">
-          <RoutingButton width={100} height={300} color="transperent" text="Explore The Book" objectPosition="0px 70%" imageSrc={book} />
+          <RoutingButton width={100} height={350} borderRadius={12} color="transperent" text="Explore The Book" objectPosition="0px 30%" imageSrc={book} style={{fontSize: '90px', lineHeight: '110px', fontWeight: '800',}} boxShadow="5px 5px 30px 3px #F0068B , -5px -5px 30px 3px #06010F" />
       </Link>  
     </div>
 
