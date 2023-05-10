@@ -8,7 +8,6 @@ export const daoSchema = new Schema({
     title:String,
     proposer:String,
     body:String,
-    proposalComms:[{ body:String, date: Date }],
     date:{type:Date, default:Date.now},
     hidden:Boolean,
     meta:{
@@ -19,7 +18,9 @@ export const daoSchema = new Schema({
 
 aI.initialize(connectDb);
 
-const Proposal = connectDb.model('Dao', daoSchema);
+ const Proposal = connectDb.model('dao', daoSchema);
 // const daoDoc = new Proposal();
+module.exports = Proposal
 daoSchema.plugin(aI.plugin, 'docID');
 // await daoDoc.save();
+export default Proposal

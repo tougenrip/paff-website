@@ -4,13 +4,20 @@ import logo from '../assets/img/pafflogo.webp';
 import Button from './button';
 
 const Navbar = () => {
+    // let Links =[
+    //     {name:"DASH",link:"/dash"},
+    //     {name:"JOURNEY",link:"/journey"},
+    //     {name:"BOOK",link:"/book"},
+    //     {name:"DAO",link:"/dao"},
+    //     {name:"CORE",link:"/core"},
+    //   ];
     let Links =[
-        {name:"DASH",link:"/dash"},
-        {name:"JOURNEY",link:"/journey"},
-        {name:"BOOK",link:"/book"},
-        {name:"DAO",link:"/dao"},
-        {name:"CORE",link:"/core"},
-      ];
+      {name:"DASH",link:"/"},
+      {name:"JOURNEY",link:"/"},
+      {name:"BOOK",link:"/"},
+      {name:"DAO",link:"/"},
+      {name:"CORE",link:"/"},
+    ];
       
       let [open,setOpen]=useState(false);
   return (
@@ -38,14 +45,14 @@ const Navbar = () => {
       <ul className={`text-center md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-black bg-opacity-90 md:h-14 h-screen md:bg-transparent  z-1 -top-4 pt-24 md:pt-0 left-0 w-full md:w-auto md:pl-0 transition-all duration-300 ease-in ${open ? 'visible':'hidden'}`}>
         {
           Links.map((link)=>(
-            <li key={link.name} className='md:ml-8 font-black font-[Jura] text-sm md:my-0 my-7'>
+            <li key={link.name} className='md:ml-8 font-black font-[Jura] text-sm md:my-0 my-7 hidden'>
               <a href={link.link} className='text-white hover:text-red-700 duration-300 tracking-widest'>{link.name}</a>
             </li>
           ))
         }
-        <div className='ml-0 md:ml-8 max-md:absolute -bottom-6 left-0 right-0 mx-auto font-bold text-4xl md:text-base'>
+        <div className='ml-0 md:ml-8 max-md:absolute -bottom-6 left-0 right-0 mx-auto font-bold pointer-events-none opacity-50 text-4xl md:text-base'>
         <Button >
-          <a href="/soon">CONNECT </a>
+          <a href="/soon">SOON </a>
         </Button>
         </div>
       </ul>

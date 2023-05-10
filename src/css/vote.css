@@ -186,6 +186,10 @@
   align-items: center;
   gap: 20px;
 }
+.example-container {
+  width: 150%;
+  height: 50%;
+}
 
 
 

@@ -11,11 +11,13 @@ import ComingSoonAlt from './pages/coming-soon';
 import Vote from './pages/vote';
 import Core from './pages/core';
 import User from './pages/user';
+import DaoTest from './pages/daotestpage'
 import Community from './pages/community';
 import JourneyOld from './pages/journey-old';
 import About from './pages/about';
 import Navbar from './components/navbar';
 import ComingSoonNavbar from './components/comingSoonNav';
+
 
 
 
@@ -30,7 +32,7 @@ function App() {
     <>
       <BrowserRouter>
       {/*{ location.pathname === '/soon' ? <ComingSoonNavbar /> : <Navbar /> } /* conditionally render the specialized navbar */}
-      <ComingSoonNavbar /> 
+      <Navbar /> 
         <Routes>
           <Route path='/' element={<ComingSoon />} />
           <Route path='/dash' element={<Dash />} />
@@ -46,6 +48,7 @@ function App() {
           <Route path='/journeyold' element={<JourneyOld/>}/>
           <Route path='/user' element={<User/>}/>
           <Route path='/vote' element={<Vote/>}/>
+          <Route path='/test' element={<DaoTest/>}/>
         </Routes>
       </BrowserRouter>
     </>

@@ -1,7 +1,34 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Background from "../../src/assets/img/journey-page/background.jpg"
-import '../css/journey.css'
+import '../css/journey.css';
+
+const leftTextVariants = {
+  lOffScreen: {
+    x:-3000
+  },
+  lOnScreen: {
+    x:1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+}
+const rightTextVariants = {
+  rOffscreen:{
+    x: 500
+  },
+  rOnscreen:{
+    x:0,
+    transition: {
+      type: "spring",
+      bounce:0.4,
+      duration:0.5,
+    }
+  },
+}
 
 const journeyOld = () => {
   return (
@@ -17,6 +44,7 @@ const journeyOld = () => {
               </div>
             </div>
           </div>
+          
           
           <div className="relative  mt-12 mx-auto text-center text-white h-[90vh] font-Gilroy font-extrabold">
             <div className="row absolute w-full top-[34vh] align-middle">
@@ -52,15 +80,18 @@ const journeyOld = () => {
               </div>
             </div>
           </div>      
+          
 
-          <div className="relative  mt-12 mx-auto text-end text-white h-[90vh] font-Gilroy font-extrabold">
-            <div className="row absolute w-full top-[34vh] align-middle">
+          <motion.div variants={leftTextVariants} initial="lOffScreen" whileInView="lOnScreen" viewport={{ once: false, amount: 'all' }}>
+          <div className="relative mt-12 mx-auto text-start text-white h-[90vh] font-Gilroy font-extrabold">
+            <div className="row absolute w-full top-[34vh] align-right">
               <div className="">
-                <h1 className='text-end ml-auto text-2xl md:text-5xl w-[85%]'>Our Belief <br/> Desire for Innovation</h1>
-              <h2 className='text-end font-extralight  ml-auto text-xl md:text-2xl mt-8 w-[85%]'>Our belief in the power of collaboration has led us to assemble a team with diverse backgrounds and expertise. Our united passion for cutting-edge technology has enabled us to develop a platform that's propelling the industry forward.</h2>
+                <h1 className='text-start mr-auto text-2xl md:text-5xl w-[85%]'>Our Belief <br/> Desire for Innovation</h1>
+              <h2 className='text-start font-extralight  mr-auto text-xl md:text-2xl mt-8 w-[85%]'>Our belief in the power of collaboration has led us to assemble a team with diverse backgrounds and expertise. Our united passion for cutting-edge technology has enabled us to develop a platform that's propelling the industry forward.</h2>
               </div>
             </div>
           </div>
+          </motion.div>
 
           <div className="relative  mt-12 mx-auto text-end text-white h-[90vh] font-Gilroy font-extrabold">
             <div className="row absolute w-full top-[34vh] align-middle">
